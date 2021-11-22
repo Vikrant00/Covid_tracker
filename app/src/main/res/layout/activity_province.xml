@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProvinceActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Search Province"
+        android:imeOptions="actionSearch"
+        android:maxLines="1"
+        android:background="@drawable/searchb"
+        android:padding="8dp"
+        android:drawablePadding="4dp"
+        android:layout_margin="8dp"
+        android:id="@+id/searchBar"
+        android:drawableLeft="@drawable/ic_search"
+        />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp"
+            android:text="Province"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            android:fontFamily="@string/bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:text="Total Cases"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            android:fontFamily="@string/bold"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/province"
+        tools:listitem="@layout/province_layout"/>
+
+</LinearLayout>
